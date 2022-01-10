@@ -5,6 +5,7 @@ categories: coding
 tag: [python, pytorch]
 toc: true
 author_profile: false
+# classes: wide
 ---
 
 <head>

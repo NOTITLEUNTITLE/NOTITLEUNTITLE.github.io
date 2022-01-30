@@ -1,6 +1,6 @@
 import os
 
-os.chdir('/mnt/d/notitle-github-blog/NOTITLEUNTITLE.github.io/_posts/bandit/')
+os.chdir('/mnt/d/notitle-github-blog/NOTITLEUNTITLE.github.io/_posts/polymath/')
 path = os.getcwd()
 print(path)
 

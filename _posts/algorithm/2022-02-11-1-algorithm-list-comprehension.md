@@ -49,36 +49,32 @@ if __name__ == '__main__':
 ```
 
 # Explain
-코드 설명을 간단히 하자면, 주석처리된 출력문을 실행해보면,<br/>
-연속된 자연수의 합으로 n을 나타낼수있는만큼 "Success"가 출력되게 된다.<br/><br/>이중 포문을 써서 1~15까지, 2~15까지.... 마지막은 15가 되면 포문을 빠져나오고, 15까지 조건에 부합하니 한번더 증가시켜준다.<br/>
-정상적으로 실행은 되지만, 효율성 테스트에서 실패했다.. 그리고 곰곰히 생각해 봤다.<br/> 최종코드는 아래와 같다!!<br/><br/><br/>
+평상시에 굉장히 많이보던 코드유형이였는데, 이러한 코드들을 comprehension이라고 한다네요 ㅎㅎ.<br/>
+다양한 예제들도 접해보고, 좋았습니다.!!!
+참고로 위의 코드를 파이썬스럽지 않게(?)짜면 아래와 같습니다!!
+
+
+
 <hr align="left" style="border: solid 10px gray;">
 
 ```python
-def solution(n):
-    answer = 1
-    for i in range(1,n//2 + 1):
-        temp = i
-        for j in range(i+1, n+1):
-            if temp > n:
-                break
-            if temp == n:
-                answer += 1
-                break
-            temp += j
-    return answer
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    result = []
+    for i in range(x+1):
+      for j in range(y+1):
+        for k in range(z+1):
+          if i+j+k != n:
+            result.append([i,j,k])
+    print(result)
+            
 ```
 <hr align="left" style="border: solid 10px gray;">
 <br/><br/><br/><br/><br/>
 
-다른 풀이 #1<br/>
-```python
-def solution(n):
-    return len([i  for i in range(1,n+1,2) if n % i is 0])
-```
-
-설명은 아래 링크를 클릭해주세요!!<br/><br/>
-<a href="https://gkalstn000.github.io/2021/01/21/%EC%88%AB%EC%9E%90%EC%9D%98-%ED%91%9C%ED%98%84/" target="_blank">https://gkalstn000.github.io/2021/01/21/%EC%88%AB%EC%9E%90%EC%9D%98-%ED%91%9C%ED%98%84/</a>
 
 <!-- # References
 <ul>

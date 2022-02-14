@@ -44,58 +44,42 @@ Sample Output 0
 
 # Idea
 <p>
-알고리즘도 필요없고, 구현만 하면 되는 문제이다.<br/>
-아래와 같이 풀어보았다 ㅎ
+백준이랑 프로그래머스 같은 국내사이트들도 훌륭하지만,<br/>
+영어공부의 필요성을 느껴서, hackerrank site의 문제들을 풀고있다.<br/>
+순서대로 풀고있어서, 쉬운문제를 풀고있지만, 점점 어려워질것같다!<br/>
+아래와 같이 풀어보았다..<br/>
+코드잼도 풀어서 올려야겠다.
 
 </p>
 <br/><br/><br/>
 
 # Code
 ```python
-class Record:
-    def __init__(self,name, score):
-        self.name = name
-        self.score = score
-    def __repr__(self):
-        return repr((self.name, self.score))
-    def value_return(self):
-        return self.score
-    def name_return(self):
-        return self.name
-
 
 if __name__ == '__main__':
     n = int(input())
-    record_list = list()
-    for i in range(n):
-        name = input()
-        score = float(input())
-        record_list.append(Record(name, score))
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
     
-    record_list = list(sorted(record_list, key=lambda x:x.score))
-    score_list = list()
+    select_score = list()
+    for key, scores in student_marks.items():
+        if key == query_name:
+            select_score = scores
     
-    for i in range(n):
-        score_list.append(record_list[i].value_return())
-
-    second_score = sorted(set(score_list))[1]
-    name_list = list()
-    for i in range(n):
-        if second_score == record_list[i].value_return():
-            name_list.append(record_list[i].name_return())
-    name_list.sort()
-    for name in name_list:
-        print(name)
+    
+    print(f"{(sum(select_score) / len(select_score)):.2f}")
 ```
 
 # Explain
-파이썬스럽게 못 풀었다...아쉽다.<br/>
-리스트에 name과 score를 입력해주고, score를 기준으로 2번째값을 구해낸 다음,
-2번째 값을 가지고있는 name들을 리스트에 넣어주고, 리스트를 알파벳순으로 정렬해서 출력한다!<br/>
-나도 밑에 풀이처럼 list comprehension을 적용했다면, 파이썬스럽게 코딩할수있었는데 아쉽다 ㅎ...<br/>
+baseline code들을 최대한 안 건드리고 푸는식으로 계속 진행하고 있다.<br/>
+설명 패스!!<br/>
 
 
-<br/><br/><br/>
+<!-- <br/><br/><br/>
 다른사람의 풀이 #1
 <hr align="left" style="border: solid 10px gray;">
 
@@ -109,11 +93,11 @@ second_highest = sorted(set([score for name, score in score_list]))[1]
 print('\n'.join(sorted([name for name, score in score_list if score == second_highest])))
 ```
 <hr align="left" style="border: solid 10px gray;">
-<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/> -->
 
-# References
+<!-- # References
 <ul>
   <li><a href="https://docs.python.org/3/howto/sorting.html" target="_blank">https://docs.python.org/3/howto/sorting.html</a></li>
   <li><a href="https://www.programiz.com/python-programming/methods/list/sort" target="_blank">https://www.programiz.com/python-programming/methods/list/sort</a></li>
-</ul>  
+</ul>   -->
 

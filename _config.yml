@@ -103,7 +103,7 @@ analytics:
 # Site Author
 author:
   name             : "NO TITLE"
-  avatar           : "./assets/images/pinkoctopus.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "./assets/images/pinkoctopus.PNG" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "CS, ML"
   location         : "South Korea"
   email            : 

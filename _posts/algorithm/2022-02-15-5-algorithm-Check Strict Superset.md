@@ -30,11 +30,14 @@ The next n lines contains the space separated elements of the other sets.<br/>
 <h2>Output Format</h2>
 Print True if set A is a strict superset of all other N sets. Otherwise, print False.
 <h2>Others</h2>
+<ul>
+<li>0 &lt; len(set(A)) &lt; 501</li>
+<li></li>
+<li></li>
 
-- 0 $\lt$ len(set(A)) $\lt$ 501
-- 0 $\lt$ N $\lt$ 21
-- 0 $\lt$ len(othersets) $\lt$ 101
-
+- 0 &lt; N &lt; 21
+- 0 &lt; len(othersets) &lt; 101
+<ul>
 
 
 <br/><br/><br/>

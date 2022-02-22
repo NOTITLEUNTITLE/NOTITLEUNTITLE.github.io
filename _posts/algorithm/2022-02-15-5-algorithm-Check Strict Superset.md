@@ -32,13 +32,9 @@ Print True if set A is a strict superset of all other N sets. Otherwise, print F
 <h2>Others</h2>
 <ul>
 <li>0 &lt; len(set(A)) &lt; 501</li>
-<li></li>
-<li></li>
-
-- 0 &lt; N &lt; 21
-- 0 &lt; len(othersets) &lt; 101
-<ul>
-
+<li>0 &lt; N &lt; 21</li>
+<li>0 &lt; len(othersets) &lt; 101</li>
+</ul>
 
 <br/><br/><br/>
 

@@ -121,7 +121,7 @@ one-to-one correspondence은 일대일 대응입니다.!!<br/>
 일대일대응이면 일대일 함수인데,<br/>
 일대일함수라고 해서 일대일대응이다라고는 할 수 없습니다!!<br/><br/>
 
-단사함수 : x &ne; y &rArr; f(x) &ne; f(y)<br/>
+<strong>단사함수</strong> : x &ne; y &rArr; f(x) &ne; f(y)<br/>
 단사함수 증명의 형태:<br/>
 pf) suppose <br/><br/>
 f(x) = f(y) <br/>
@@ -130,7 +130,37 @@ f(x) = f(y) <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br/>
 &nbsp;&nbsp;&nbsp;  x= y<br/><br/>
  
-전사함수 : 
+<strong>전사함수</strong> : 집합 Y의 모든 원소들이 preimage를 갖는경우
+<br/>
+pf) suppose<br/>
+y &isin; Y<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br/>
+f(x) = y 되는 x &isin; X<sub>QED</sub><br/><br/><br/><br/>
+
+
+<strong>전단사함수</strong> : permutation(자리 바꾸기)(N factorial)<br/>
+쉽게 설명하자면 사다리타기 게임을 생각하시면 됩니다.<br/>
+```
+A B
+| |
+|-|
+| |
+|-|
+| |
+O X
+```
+A는 O, B는 X가 나옵니다.(그림이 허접하네요..)<br/>
+첫번째로 바뀌는 부분에서도 bijection(전단사)가 되고, 두번째로 바뀌는 부분에서도 bijection(전단사) 됩니다.
+아무리 많이 바꾸더라도, O는 1명, X도 1명이 가지게 됩니다.
+
+bijection을 chain으로 아무리 많이 하더라도, bijection입니다!!!
+
+
+
+
+
 
 
 

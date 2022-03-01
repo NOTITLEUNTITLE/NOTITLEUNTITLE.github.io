@@ -69,3 +69,50 @@ print(len(train_data))
 - <a href="https://www.notion.so/c1ecb7cc52d446cc93d928d172ef8442" target="_blank">Annotation Guide</a>
 
 이러면 train data의 label을 전부 다 확인해 봐야 한다.
+<br/><br/>
+
+# 3일차
+NLP란,<br/>
+우리가 흔히들 자연어 과제(Task)를 진행할 때, pre-trained model을 사용하는데, 사용하는 이유는, 컴퓨터 자원을 너무 많이 소비하기 때문이다.
+pre-trained을 하게되면, 문맥의 의미를 학습하게 되고, 사람처럼(이정도 까지는 아직 아니지만)학습을 한다.<br/><br/>
+그런다음 fine-tuning이라는 걸 하게되는데, 정말 많은 용량의 글들을 수집해서, 학습해도 상관없지만, 시간이 오래 걸리고, 컴퓨터 자원을 많이 소비하게 되므로, Task에 맞게 학습을 진행해준다.
+<br/><br/>
+<img src="../../images/2022-03-01/1.PNG">
+
+위의 이미지를 가져온 곳이며 개인적으로 생각했을때 설명이 잘 되어있는 유튜브 링크를 첨부하겠습니다.<br/>
+<a href="https://www.youtube.com/watch?v=Z201jwWo-xs&list=PLrLEKGJAgXxL-R9IqDH7HANWXRsS900tF" target="_blank">링크</a>
+
+
+개인적으로 하는말....<br/>
+와..이게 인공지능의 3가지 주요분야인 computer vision, time series, nlp를 쉬지않고 대회를 하니깐, 공부할때랑은 확실히 다르게 습득하는게 차원이 다르다...<br/>
+역시 나는 실전에 부딪치면서 배우는 스타일이다..<br/>
+
+
+<br/><br/><br/>
+
+# 4일차
+와... 단어들을 관계유사도부터 시작해서 정말 안해본게 없을정도이다..<br/>
+사실 huggingface에 있는 beomi분의 bias, hate 모델들을 가져와서 쓰면 정말 편하고 좋지만, 학습시키려니 막막한 부분들이 너무 많다....<br/>
+편한 길을 가야했는데 ㅋㅋㅋ<br/>
+
+<a href="https://super.gluebenchmark.com/leaderboard" target="_blank">https://super.gluebenchmark.com/leaderboard</a>
+
+위의 링크는 nlp의 성능을 확인해주는 지표를 모아둔 사이트이다.<br/>
+nlp에서의 task라고 하면, 단어생성, 분류, Q/A(?)뭐 이런게 있다.<br/>
+인공지능을 하다보면 아무래도 치팅이냐 아니냐가 중요해지는데,<br/>
+학습시킨 데이터로 평가하면 문제가 되니, 위의 사이트에서는 특정 데이터셋을 가지고 평가를 해주는것 같다.<br/>
+사이트에 들어가보면 BERT모델은 거의 최하단에 rank되어 있다..ㅜㅜ<br/>
+작업내역 정리하는것도 일이지만,, 너무 많이 해서 머리가 터질지경이다..ㅋㅋㅋ<br/>
+
+<br/>
+<img src="../../images/2022-03-01/2.PNG"><br/>
+단어들의 similar를 봐보기도 하고(답답해서 이것저것 많이 해봤습니다. ㅋㅋㅋ)<br/><br/>
+
+
+<img src="../../images/2022-03-01/3.PNG">
+title에서는 형태소를 뽑아내고, comment에서는 명사를 뽑아내서, 이 두개를 합쳐서 content token을 만들어 내고 학습도 시켜보고 ㅋㅋㅋ<br/>
+제가 너무 이상하게 하고 있나보네요 ㅋㅋ <br/>
+대회를 하는게 아니라 개인공부하는것처럼 했네요 ㅋㅋ<br/>
+
+
+

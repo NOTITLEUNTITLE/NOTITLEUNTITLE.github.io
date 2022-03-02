@@ -113,6 +113,40 @@ nlp에서의 task라고 하면, 단어생성, 분류, Q/A(?)뭐 이런게 있다
 title에서는 형태소를 뽑아내고, comment에서는 명사를 뽑아내서, 이 두개를 합쳐서 content token을 만들어 내고 학습도 시켜보고 ㅋㅋㅋ<br/>
 제가 너무 이상하게 하고 있나보네요 ㅋㅋ <br/>
 대회를 하는게 아니라 개인공부하는것처럼 했네요 ㅋㅋ<br/>
+<br/><br/>
+이번 Task와 동일한 데이터셋도 github에서 찾았습니다.<br/>
+<a href="https://raw.githubusercontent.com/kocohub/korean-hate-speech/master/labeled/train.tsv" target="_blank">github dataset</a>
+<br/><br/>
+
+너무 답답한게...데이터 셋을 다 구하고, high level에서의 모델 구현방법과 동작원리를 전부 다 알겠는데, 적용을 못하는게 답답합니다....<br/>
+이래서 토이 프로젝트를 많이 해봐야하는구나 ㅋㅋ<br/><br/>
+
+<br/><br/>
+# 5일차
+팀원분들과 회의(이야기?)를 하면서 몇 가지를 알아낸 사실을 적어보겠습니다.<br/>
+첫 번째로, 평가지표에 관한 내용입니다.<br/>
+
+<img src="../../images/2022-03-03/1.jpg">
+
+<strong>최종점수</strong>을 보면, bias와 hate의 정답을 각각 macro F1-Score로 구한후, 평균을 내어준다...<br/><br/>
+bias가 총 3가지의 경우의 수를 가지고(none, gender, others), hate가 총 2가지의 경우의 수를 가지니(none, hate), 총 6가지의 경우의 수를 구해서 맞춘 결과가 점수로 나오는줄 알았다...<br/>
+그러나, 평가지표만 확인해보니 bias 따로 구하고, hate 따로 구해서, 평균을 내준 점수로 평가를 하고 있었다.<br/><br/>
+회의한 내용들을 나열해 보자면...<br/>
+1. transformer에서 pipeline이라는 method가 있는데, 확률을 구해준다.<br/>
+2. voting을 할때, 모델별로 가중치를 다르게 주어서 해보면 좋다.<br/>
+3. 현재 bias는 fi-score 점수가 99점은 나온다고 생각한다.(validation 평가시)<br/>
+4. hate가 이진분류 문제이므로, 긍정/부정 모델들을 써보는것도 좋을것 같다.<br/><br/>
+
+<br/><br/>
+
+# 6일차
+
+
+
+
+
+
+
 
 
 

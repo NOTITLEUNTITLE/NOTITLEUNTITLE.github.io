@@ -139,7 +139,32 @@ bias가 총 3가지의 경우의 수를 가지고(none, gender, others), hate가
 
 <br/><br/>
 
-# 6일차
+# 6일차 ~ 대회 종
+오늘은 밀린 기록들을 쭉 정리해 보고 대회결과도 알려드리겠씁니다!!<br/>
+일단 팀원분들과 회의를 할때마다, 계속 나오는 얘기가 있었습니다<br/>
+`도대체 어떤 기준으로 public socre가 올라가는 것인가..`<br/>
+이런 생각을 왜 했냐면요..<br/>
+저희가 train data를 validation과 train으로 나눠봤습니다.<br/>
+그리고 나서 fine-tuning을 train data로 시킨 후, validation 으로 평가를 하면,<br/>
+이번 대회의 평가지표인 fi-score가 <strong>99%</strong>가 나오게 만들었는데요<br/><br/>
+
+이렇게 Task에 맞게 잘 fine-tuning을 시킨 모델로 test data에 대해서 예측을 하고, 제출을 하게 되면, 70~75점이 계속 나옵니다...<br/>
+(음... 저희는 hugging face에 있는 한국어로 pretrained model들을 정말 많이 시도 해봤습니다... 100가지의 모델에 대해서 한것같네요;;;)<br/>
+<br/>
+조금 당황스러웠습니다..<br/>
+근데 생각해보면 이해는 갔습니다.<br/>
+test data에 있는 hate와 bias 댓글들에 대해서는 학습을 시킨게 아니니깐요..<br/>
+그래서 대회 종료에 맞춰서, 가장 그럴싸한 방법으로 접근한 모델을 제출했고,<br/>
+2등으로 마무리하게 되었습니다.<br/>
+<br/>
+
+---
+
+# Github
+<a href="https://github.com/NOTITLEUNTITLE/MNC_NLP" target="_blank">https://github.com/NOTITLEUNTITLE/MNC_NLP</a><br/>
+위의 링크에 들어가보시면 저희가 제출한 모델은 어떤것인지, 그리고 다른 방법론에 대해서도 작성해 두었습니다.<br/>
+
+
 
 
 

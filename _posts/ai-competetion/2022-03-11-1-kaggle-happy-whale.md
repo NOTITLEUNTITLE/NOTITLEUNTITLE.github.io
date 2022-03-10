@@ -2,6 +2,7 @@
 layout: single
 title:  "[kaggle] happy whale"
 categories: ML
+tag: [kaggle]
 toc: true
 author_profile: false
 ---
@@ -82,3 +83,10 @@ loss function은 softmax를 변형하였는데,<br/>
 
 
 ![image](../../images/2022-03-11/2.png)
+<br/><br/>
+
+## 3월 11일
+- KNN
+  - KNN분류
+    - 비선형이다.
+    - 

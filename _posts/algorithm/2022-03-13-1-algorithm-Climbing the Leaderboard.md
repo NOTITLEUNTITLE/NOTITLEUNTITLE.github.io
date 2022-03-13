@@ -98,9 +98,10 @@ def climbingLeaderboard(ranked, player):
 이중 포문이 아무래도 시간을 많이 잡아먹는것 같았다.</br>
 </br>
 정렬이 되어있는 상태에서 숫자를 비교하는게 O(n)의 시간복잡도를 가지므로,
-binary-search 알고리즘을 적용해 보기로 하였다.</br>
+binary-search 알고리즘을 적용하려고 하였으나, 예전에 python package중에서 bisect라는것을 본적이 있었던것 같았다.</br>
 </br>
-binary-search 알고리즘은
+찾아보았더니 내가 원했던 결과를 얻어낼 수 있었다.(역시 파이썬..대다나다)
+
 
 
 
@@ -109,11 +110,21 @@ binary-search 알고리즘은
 ## 최종코드
 ```python
 
+def climbingLeaderboard(ranked, player):
+    # Write your code here
+    rank = sorted(list(set(ranked)))
+    result = list()
+    import bisect
+    for i in range(len(player)):
+        rere = len(rank) - bisect.bisect(rank, player[i]) + 1
+        result.append(rere)
+    return result
+
 ```
 
 
 # Explain
-생략.
+bisect에 관한 설명은 Reference를 참고해 주세요!
 
 
 
@@ -122,6 +133,16 @@ binary-search 알고리즘은
 다른사람의 풀이 #1
 <hr align="left" style="border: solid 10px gray;">
 
+```python
+def climbingLeaderboard(ranked, player):
+    # Write your code here
+    import bisect
+    ranked = list(set(ranked))
+    ranked.sort()
+    length = len(ranked)
+    return [(length-bisect.bisect(ranked, i))+1 for i in player]
+```
+list comprehension으로 문제를 간단하게 풀었네요.. 대다나다
 
 <hr align="left" style="border: solid 10px gray;">
 <br/><br/>
@@ -132,7 +153,10 @@ binary-search 알고리즘은
 
 # References
 <ul>
-  <li><a href="https://www.youtube.com/watch?v=FMxA_g9oQnA" target="_blank">https://www.youtube.com/watch?v=FMxA_g9oQnA</a></li>
+  <li><a href="https://programming119.tistory.com/196" target="_blank">https://programming119.tistory.com/196</a></li>
+  <li><a href="https://docs.python.org/3.8/library/bisect.html" target="_blank">https://docs.python.org/3.8/library/bisect.html</a></li>
+  <li><a href="https://11001.tistory.com/71" target="_blank">https://11001.tistory.com/71</a></li>
+  
   
   
 </ul>

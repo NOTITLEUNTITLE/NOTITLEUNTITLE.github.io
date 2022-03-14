@@ -23,6 +23,7 @@ An arcade game player wants to climb to the top of the leaderboard and track the
 <br/><br/><br/>
 
 # 제한사항
+
 <h2>Input Format</h2>
 
 - The first line contains an integer n, the number of players on the leaderboard.
@@ -36,13 +37,12 @@ An arcade game player wants to climb to the top of the leaderboard and track the
 
 <h2>Others</h2>
 <ul>
-<li>1 &leq; n &leq; 2 &times; 10<sup>5</li>
-<li>1 &leq; m &leq; 2 &times; 10<sup>5</li>
-<li>0 &leq; ranked[i] &leq; 10<sup>9</sup> for 0 &leq; i &lt; n</li>
-<li>0 &leq; player[j] &leq; 10<sup>9</sup> for 0 &leq; j &lt; m</li>
-<li>The existing leaderboard, ranked, is in descending order.</li>
-<li>The player's scores, player, are in ascending order.</li>
-
+    <li>1 &leq; n &leq; 2 &times; 10<sup>5</li>
+    <li>1 &leq; m &leq; 2 &times; 10<sup>5</li>
+    <li>0 &leq; ranked[i] &leq; 10<sup>9</sup> for 0 &leq; i &lt; n</li>
+    <li>0 &leq; player[j] &leq; 10<sup>9</sup> for 0 &leq; j &lt; m</li>
+    <li>The existing leaderboard, ranked, is in descending order.</li>
+    <li>The player's scores, player, are in ascending order.</li>
 </ul>
 
 <br/><br/><br/>
@@ -50,6 +50,7 @@ An arcade game player wants to climb to the top of the leaderboard and track the
 
 
 # 입출력 예
+
 Sample Input 0
 ```
 7
@@ -78,6 +79,7 @@ player들의 ranking을 return해주면 되는데요.<br/>
 <br/><br/><br/>
 
 # Code
+
 ```python
 def climbingLeaderboard(ranked, player):
     # Write your code here
@@ -93,6 +95,7 @@ def climbingLeaderboard(ranked, player):
         result.append(num)
     return result
 ```
+
 위의 코드로 제출을 하니, 정상작동은 하지만 시간초과가 떳습니다.</br>
 그래서 어떻게 하면 시간을 줄일수 있을지 고민을 해 보았고, </br>
 이중 포문이 아무래도 시간을 많이 잡아먹는것 같았다.</br>
@@ -152,12 +155,10 @@ list comprehension으로 문제를 간단하게 풀었네요.. 대다나다
 
 
 # References
+
 <ul>
   <li><a href="https://programming119.tistory.com/196" target="_blank">https://programming119.tistory.com/196</a></li>
   <li><a href="https://docs.python.org/3.8/library/bisect.html" target="_blank">https://docs.python.org/3.8/library/bisect.html</a></li>
   <li><a href="https://11001.tistory.com/71" target="_blank">https://11001.tistory.com/71</a></li>
-  
-  
-  
 </ul>
 

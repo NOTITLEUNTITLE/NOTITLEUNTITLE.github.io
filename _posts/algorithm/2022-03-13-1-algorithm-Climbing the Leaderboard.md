@@ -13,40 +13,31 @@ An arcade game player wants to climb to the top of the leaderboard and track the
 
 - The player with the highest score is ranked number 1 on the leaderboard.
 - Players who have equal scores receive the same ranking number, and the next player(s) receive the immediately following ranking number.
- 
-
-
-
-<br/><br/>
-
 
 <br/><br/><br/>
 
 # 제한사항
 
-<h2>Input Format</h2>
+## Input Format
 
 - The first line contains an integer n, the number of players on the leaderboard.
 - The next line contains n space-separated integers ranked[i], the leaderboard scores in decreasing order.
 - The next line contains an integer, m, the number games the player plays.
 - The last line contains m space-separated integers player[j], the game scores.
 
-<h2>Output Format</h2>
+## Output Format
 
 - int[m]: the player's rank after each new score
 
-<h2>Others</h2>
-<ul>
-    <li>1 &leq; n &leq; 2 &times; 10<sup>5</li>
-    <li>1 &leq; m &leq; 2 &times; 10<sup>5</li>
-    <li>0 &leq; ranked[i] &leq; 10<sup>9</sup> for 0 &leq; i &lt; n</li>
-    <li>0 &leq; player[j] &leq; 10<sup>9</sup> for 0 &leq; j &lt; m</li>
-    <li>The existing leaderboard, ranked, is in descending order.</li>
-    <li>The player's scores, player, are in ascending order.</li>
-</ul>
+## Others
+- 1 &lt;= n &lt;= 2 &times; 10<sup>5
+- 1 &lt;= m &lt;= 2 &times; 10<sup>5
+- 0 &lt;= ranked[i] &lt;= 10<sup>9</sup> for 0 &lt;= i &lt; n
+- 0 &lt;= player[j] &lt;= 10<sup>9</sup> for 0 &lt;= j &lt; m
+- The existing leaderboard, ranked, is in descending order.
+- The player's scores, player, are in ascending order.
 
 <br/><br/><br/>
-
 
 
 # 입출력 예
@@ -67,6 +58,7 @@ Sample Output 0
 ```
 
 # Idea
+
 <p>
 일단 이 문제가 처음으로 시간초과로 저를 반겨주었습니다.<br/>
 입출력 예시 설명만으로도 문제가 이해가 되실것입니다.<br/>
@@ -96,14 +88,14 @@ def climbingLeaderboard(ranked, player):
     return result
 ```
 
-위의 코드로 제출을 하니, 정상작동은 하지만 시간초과가 떳습니다.</br>
-그래서 어떻게 하면 시간을 줄일수 있을지 고민을 해 보았고, </br>
-이중 포문이 아무래도 시간을 많이 잡아먹는것 같았다.</br>
-</br>
-정렬이 되어있는 상태에서 숫자를 비교하는게 O(n)의 시간복잡도를 가지므로,
-binary-search 알고리즘을 적용하려고 하였으나, 예전에 python package중에서 bisect라는것을 본적이 있었던것 같았다.</br>
-</br>
-찾아보았더니 내가 원했던 결과를 얻어낼 수 있었다.(역시 파이썬..대다나다)
+위의 코드로 제출을 하니, 정상작동은 하지만 시간초과가 떳습니다.   
+그래서 어떻게 하면 시간을 줄일수 있을지 고민을 해 보았고,    
+이중 포문이 아무래도 시간을 많이 잡아먹는것 같았다.   
+   
+정렬이 되어있는 상태에서 숫자를 비교하는게 O(n)의 시간복잡도를 가지므로,   
+binary-search 알고리즘을 적용하려고 하였으나, 예전에 python package중에서 bisect라는것을 본적이 있었던것 같았다.   
+
+찾아보았더니 내가 원했던 결과를 얻어낼 수 있었다.(역시 파이썬..대다나다)   
 
 
 

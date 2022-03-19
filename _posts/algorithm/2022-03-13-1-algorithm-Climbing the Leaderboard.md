@@ -30,10 +30,10 @@ An arcade game player wants to climb to the top of the leaderboard and track the
 - int[m]: the player's rank after each new score
 
 ## Others
-- 1 &lt;= n &lt;= 2 &times; 10<sup>5
-- 1 &lt;= m &lt;= 2 &times; 10<sup>5
-- 0 &lt;= ranked[i] &lt;= 10<sup>9</sup> for 0 &lt;= i &lt; n
-- 0 &lt;= player[j] &lt;= 10<sup>9</sup> for 0 &lt;= j &lt; m
+- 1 &le; n &le; 2 &times; 10<sup>5
+- 1 &le; m &le; 2 &times; 10<sup>5
+- 0 &le; ranked[i] &le; 10<sup>9</sup> for 0 &le; i &lt; n
+- 0 &le; player[j] &le; 10<sup>9</sup> for 0 &le; j &lt; m
 - The existing leaderboard, ranked, is in descending order.
 - The player's scores, player, are in ascending order.
 

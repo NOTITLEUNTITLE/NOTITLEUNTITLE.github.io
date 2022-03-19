@@ -25,9 +25,9 @@ int: the length of the longest subset of S` meeting the criteria
 
 
 ## Others
-- 1 &lt;= n &lt;= 10<sup>5</sup>
-- 1 &lt;= k &lt;= 100
-- 1 &lt;= S[i] &lt;= 10<sup>9</sup>
+- 1 &le; n &le; 10<sup>5</sup>
+- 1 &le; k &le; 100
+- 1 &le; S[i] &le; 10<sup>9</sup>
 - All of the given numbers are distinct.
 
 <br/><br/><br/>

@@ -9,15 +9,17 @@ author_profile: false
 
 
 # 문제 설명
-An English text needs to be encrypted using the following encryption scheme.
-First, the spaces are removed from the text. Let L be the length of this text.
-Then, characters are written into a grid, whose rows and columns have the following constraints:
+An English text needs to be encrypted using the following encryption scheme.<br/>
+First, the spaces are removed from the text. Let L be the length of this text.<br/>
+Then, characters are written into a grid, whose rows and columns have the following constraints:<br/>
+<img src="../../images/2022-03-24/1.PNG">
 
-
-<br/><br/>
-Jesse가 달콤한 쿠키를 좋아하는데, 달콤함의 정도가 최소 k보다 크거나 같아야 한다고 합니다.<br/>
-그렇게 만들기 위해서, k보다 작은 달콤함을 가진 쿠키 2개를 믹스한다고 하네요.<br/>
-만약 쿠키를 전부 다 믹스했는데도 k보다 작다면 -1를 리턴하면 되겠습니다.<br/>
+<br/><br/><br/>
+L은 공백을 제거한 문자열의 길이이고,<br/>
+row와 column은 row &times; column &ge; L을 만족하는 최소값이 row, column이 된다.<br/>
+또한 row, column은 L에 root한 값의 버림값보다 크거나 같고, 올림값보다는 작거나 같다.<br/>
+공백을 제거한 문자열을 column 자리수 만큼 나누면 row개의 문자열이 완성 된다.
+그렇게 만들어진 문자열들을 다시 column을 기준으로 재배열 한후에, 각 라인의 끝에 공백을 넣어서 리턴을 해주면 된다.
 
 
 
@@ -26,20 +28,17 @@ Jesse가 달콤한 쿠키를 좋아하는데, 달콤함의 정도가 최소 k보
 # 제한사항
 
 ## Input Format
-- A의 리스트를 넘겨주고, A는 각 쿠키별 달콤함의 수치를 가지고 있습니다.
-- k는 쿠키가 가져야 할 최소한의 달콤함의 수치입니다.
+- One line of text, the string s
 
 ## Output Format
 
-- 만약 모든 쿠키를 다 믹스했는데도 k보다 작으면 -1을 리턴
-- 그렇지 않고, 쿠키를 n번동안 믹스 했더니 모든 쿠키가 k보다 크거나 같으면 n번을 리턴
+- string: the encrypted string
 
 
 
 ## Others
-- 1 &le; n &le; 10<sup>6</sup>
-- 0 &le; k &le; 10<sup>9</sup>
-- 0 &le; A[i] &le; 10<sup>6</sup>
+- 1 &le; length of s &le; 81
+
 
 <br/><br/><br/>
 
@@ -47,20 +46,19 @@ Jesse가 달콤한 쿠키를 좋아하는데, 달콤함의 정도가 최소 k보
 # 입출력 예
 Sample Input
 ```
-6 7          
-1 2 3 9 10 12
+haveaniceday
 ```
 Sample Output
 ```
-2
+hae and via ecy
 ```
 
 # Idea
 
 <p>
-그냥 막 풀려고 했는데, 숫자가 백만단위가 있어서, 시간을 고려해야할것 같았습니다.<br/>
-저는 정렬을 고려했기에 heap을 사용했습니다.<br/>
-코드는 아래와 같습니다.<br/>
+영어공부를 열심히 했으면 정말 쉽게 풀렸을 텐데, 이해를 못해서 해맸습니다.<br/>
+문제는 정말 쉽습니다.<br/>
+
 
 </p>
 <br/><br/><br/>
@@ -68,24 +66,20 @@ Sample Output
 # Code
 
 ```python
-def cookies(k, A):
+def encryption(s):
     # Write your code here
-    heapq.heapify(A)
-    count = 0
-    while A[0] < k:
-        if len(A) == 1:
-            return -1
-        min_num1=heapq.heappop(A)
-        min_num2=heapq.heappop(A)
-        heapq.heappush(A,min_num1+min_num2*2)
-        count += 1
-    return count
+    s.replace(" ", "") #saco lo espacios
+    L = math.sqrt(len(s))
+    columns = math.ceil(L)
+    result = [s[i::columns] for i in range(columns)]
+    return " ".join(result)
 ```
 
 
 # Explain
-heapify() method로 정렬을 한 후, 가장 작은 달콤함의 수치를 확인하고,<br/>그 수치가 k보다 작으면, 커질때까지 반복문을 수행합니다.<br/>
-다만, 반복문안에서 리스트의 길이가 1개이면, 믹스를 할 수 없기에, -1를 리턴합니다.<br/>
+먼저 입력받은 String s의 공백을 제거합니다.<br/>
+그럼 다음 root를 씌워서 제곱근을 구하고 max columns을 구하기 위해서 올림합니다.<br/>
+그런 다음 list comprehension을 이용하여 column을 기준으로 새로운 리스트를 만들고, return할 때, 문자열로 바꾸어 줍니다.<br/>
 
 
 <br/><br/><br/>

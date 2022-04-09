@@ -99,7 +99,13 @@ def gridSearch(G, P):
 1번분도 시간초과가 뜨셧습니다.<br/>
 2번째분은 spot이라는 list에 패턴이 일치한지 파악한뒤 인덱스 값을 넣어주었습니다.<br/>
 그런다음 r은 row, c은 col으로 pattern과 일치하는지 확인한후, return하는 구조이네요.<br/>
-음.. 저의 풀이법은 왜 틀린걸까요?...
+저의 코드에서는 시간초과 문제만 나오게 고쳐보았습니다.<br/>
+1번분의 코드처럼 각각의 for문에서 +1 만 시켜주면 됩니다.<br/>
+```python
+for i in range(len(G) - len(P) + 1):
+    for j in range(len(G[0]) - len(P[0]) + 1):
+```
+
 
 
 <!-- # References

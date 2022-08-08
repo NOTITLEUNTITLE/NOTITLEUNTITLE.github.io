@@ -208,6 +208,8 @@ if __name__ == '__main__':
 <ul>
   <li><a href="https://docs.python.org/3.6/library/functions.html#getattr" target="_blank">https://docs.python.org/3.6/library/functions.html#getattr</a></li>
   <li><a href="https://docs.python.org/3.6/library/functions.html?highlight=eval#eval" target="_blank">https://docs.python.org/3.6/library/functions.html?highlight=eval#eval</a></li>
+  <li><a href="https://www.scaler.com/topics/what-is-list-in-python/" 
+target="_blank">https://www.scaler.com/topics/what-is-list-in-python/</a></li>
   
 </ul>
 
